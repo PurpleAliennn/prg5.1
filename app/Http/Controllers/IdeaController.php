@@ -14,36 +14,28 @@ class IdeaController extends Controller
 
         $characters = Idea::all();
         return view('ideaView', ['characters' => $characters]);
-
-//        $character = new Idea();
-//        $character->name = 'sparkleSlammer';
-//        $character->idea = 'bard barbarian fairy';
-//
-//        return view('ideaView', ['character' => $character]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
+    public function create() {
+        return view('idea.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request){
+        $character = new Idea();
+
+        $character -> name = $request->input('name');
+        $character -> idea = $request->input('idea');
+
+        $character -> save();
+        return redirect() -> route('ideas.index');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Idea $idea)
-    {
-        //
+    public function show(Idea $idea){
+        $idea = Idea::find($idea->id);
+        return view('idea.show', ['idea' => $idea]);
     }
 
     /**

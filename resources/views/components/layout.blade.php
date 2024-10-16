@@ -8,13 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-
-        <a href="{{ route('ideas.create') }}"> add a new idea </a>
-
-        @foreach ($characters as $character)
-            <h3>{{$character -> name}}</h3>
-            <p>{{$character -> idea}}</p>
-            <a href="{{route('ideas.show', $character -> id)}}"> Details </a>
-        @endforeach
+    {{ $slot }}
 </body>
 </html>
