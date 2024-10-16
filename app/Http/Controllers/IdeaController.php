@@ -57,8 +57,8 @@ class IdeaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Idea $idea)
-    {
-        //
+    public function destroy(Idea $idea) {
+        $idea -> delete();
+        return redirect() -> route('ideas.index');
     }
 }
