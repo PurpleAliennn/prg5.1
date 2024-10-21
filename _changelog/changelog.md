@@ -7,3 +7,6 @@ the data from the database is shown in the view.
 **_16/10_** : added the create & show pages, information entered
 in the create page is also stored into the database.
 made css for what I have so far.
+
+**_21/10_** : last part of crud has been added, the edit page, it also
+updates the info into the database.

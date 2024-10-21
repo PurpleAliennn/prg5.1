@@ -1,10 +1,13 @@
 /*@tailwind base;*/
 /*@tailwind components;*/
 /*@tailwind utilities;*/
+*{
+    font-family: "Inclusive Sans", serif;
+}
 body {
     padding: 0;
     margin: 0;
-    font-family: "Inclusive Sans", serif;
+
     background-color: #fffdf5;
 }
 
@@ -182,6 +185,21 @@ footer {
 }
 
 #delete-button:hover{
+    background-color: #547052;
+    color: #fffdf5;
+}
+
+#edit-button {
+    background-color: #fffdf5;
+    border: none;
+    border-radius: 10px;
+    height: 5vh;
+    width: 10vw;
+    color: #547052;
+
+}
+
+#edit-button:hover{
     background-color: #547052;
     color: #fffdf5;
 }

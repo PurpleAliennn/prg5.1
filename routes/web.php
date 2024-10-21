@@ -4,12 +4,10 @@ use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::resource('ideas', IdeaController::class);
 
+Route::get('/', [IdeaController::class, 'index'])->name('ideas.index');
 
 
 Route::get('/dashboard', function () {

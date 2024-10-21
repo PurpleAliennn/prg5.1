@@ -9,11 +9,18 @@
                 <a href="{{route('ideas.index')}}"> return </a>
             </div>
 
-            <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
-                @method('DELETE')
-                @csrf
-                <button type="submit" id="delete-button"> delete </button>
-            </form>
+            <div class="buttons-showpage">
+                <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" id="delete-button"> delete </button>
+                </form>
+                <form action="{{route('ideas.edit', $idea -> id)}}" method="POST">
+                    @method('GET')
+                    @csrf
+                    <button type="submit" id="edit-button"> edit </button>
+                </form>
+            </div>
         </div>
     </div>
 </x-layout>
