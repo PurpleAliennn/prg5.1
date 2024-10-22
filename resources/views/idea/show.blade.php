@@ -9,6 +9,7 @@
                 <a href="{{route('ideas.index')}}"> return </a>
             </div>
 
+            @auth
             <div class="buttons-showpage">
                 <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
                     @method('DELETE')
@@ -21,6 +22,8 @@
                     <button type="submit" id="edit-button"> edit </button>
                 </form>
             </div>
+            @endauth
+
         </div>
     </div>
 </x-layout>

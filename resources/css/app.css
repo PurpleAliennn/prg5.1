@@ -250,3 +250,19 @@ footer {
     display: flex;
     justify-content: space-evenly;
 }
+
+#nav-links:hover{
+    color: #547052;
+}
+
+#logout-button {
+    background-color: #8FBC8B;
+    border: none;
+    color: #fffdf5;
+    font-size: 1.2rem;
+    margin-top: 1.5vh;
+}
+
+#logout-button:hover{
+    color: #547052;
+}
