@@ -17,10 +17,11 @@ class IdeaController extends Controller
         return view('idea.create');
     }
 
-    public function store(Request $request) {
+    public function store(Request $request, Idea $idea) {
         $character = new Idea();
 
         $character -> name = $request->input('name');
+        $character -> user_id = auth()->user()->id;
         $character -> idea = $request->input('idea');
 
         $character -> save();

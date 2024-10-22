@@ -8,8 +8,7 @@
                 <p> {{$idea->idea}}</p>
                 <a href="{{route('ideas.index')}}"> return </a>
             </div>
-
-            @auth
+        @if(isset(auth()-> user()-> id) && $idea -> user_id === auth()-> user()-> id)
             <div class="buttons-showpage">
                 <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
                     @method('DELETE')
@@ -22,7 +21,7 @@
                     <button type="submit" id="edit-button"> edit </button>
                 </form>
             </div>
-            @endauth
+        @endif
 
         </div>
     </div>

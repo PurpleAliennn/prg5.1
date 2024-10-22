@@ -6,6 +6,10 @@
         <x-navlink href="{{ route('register') }}" :active="request()->is('register')" id="nav-links">Register</x-navlink>
     @endguest
 
+    @admin
+        <p> manage posts </p>
+    @endadmin
+
     @auth
         <x-navlink href="{{ route('ideas.create') }}" :active="request()->is('ideas.create')" id="nav-links">Add new character idea</x-navlink>
         <x-navlink href="{{ route('profile.edit') }}" :active="request()->is('profile.edit')" id="nav-links">Profile</x-navlink>
@@ -14,6 +18,5 @@
             @csrf
             <button type="submit" id="logout-button"> Logout</button>
         </form>
-
     @endauth
 </nav>
