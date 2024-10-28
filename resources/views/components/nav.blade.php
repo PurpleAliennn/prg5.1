@@ -7,7 +7,7 @@
     @endguest
 
     @admin
-        <p> manage posts </p>
+        <x-nav-link href="{{ route('admin') }}" :active="request()->is('admin')" id="nav-links"> Admin </x-nav-link>
     @endadmin
 
     @auth

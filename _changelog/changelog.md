@@ -17,5 +17,6 @@ as laravel added a lot of things I did not dare to touch.
 
 Got the logout button to work on the homepage.
 
-made a table for the tags, and added an admin role
+made a table for the tags, and added an admin role.
 
+**_28/10_** : Managed to get the tags working!! Admin can also create new tags

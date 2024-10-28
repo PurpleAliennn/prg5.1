@@ -80,14 +80,16 @@ footer {
     background-color: #b2cfb0;
     padding: 20px;
     border-radius: 15px;
+    height: 50vh;
+    width: 40vw;
 }
 .create-button {
     background-color: #fffdf5;
     border: none;
     border-radius: 5px;
-    margin-left: 6vw;
-    margin-top: 2vh;
-    width: 10vw;
+    /*margin-left: 6vw;*/
+    margin-top: 5vh;
+    width: 40vw;
     height:4vh;
     font-size: 1rem;
     color: #547052;
@@ -122,7 +124,7 @@ footer {
     border-radius: 10px;
     border: none;
     height: 15vh;
-    width: 20vw;
+    /*width: 20vw;*/
 }
 
 .details {
@@ -265,4 +267,25 @@ footer {
 
 #logout-button:hover{
     color: #547052;
+}
+
+.tag-details {
+    background-color: #8FBC8B;
+    width: 5vw;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.tag-details p{
+    font-size: 0.9rem;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 40vw;
+    height: 5vh;
+    align-items: center;
+    color: #fffdf5;
 }

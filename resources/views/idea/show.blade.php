@@ -6,6 +6,9 @@
             <div class="details-content">
                 <h1> {{$idea->name}} </h1>
                 <p> {{$idea->idea}}</p>
+                <div class="tag-details">
+                    <p> {{$category-> name}}</p>
+                </div>
                 <a href="{{route('ideas.index')}}"> return </a>
             </div>
         @if(isset(auth()-> user()-> id) && $idea -> user_id === auth()-> user()-> id)
