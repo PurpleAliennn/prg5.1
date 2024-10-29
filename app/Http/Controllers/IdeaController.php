@@ -8,9 +8,14 @@ use Illuminate\Http\Request;
 
 class IdeaController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
 
         $characters = Idea::all();
+
+        if($request -> input('search') != null && $request -> input('search') != "") {
+            $characters = Idea::where('name', 'like', '%'.$request -> input('search').'%')->orWhere('idea', 'like', '%'.$request -> input('search').'%')->get();
+        }
+
         return view('ideaView', ['characters' => $characters]);
 
     }

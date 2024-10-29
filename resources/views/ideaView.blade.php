@@ -2,6 +2,11 @@
 
 <x-layout>
     <div class="main">
+        <form action='{{ route('ideas.index') }}' method="get">
+            @csrf
+            <input id="search" name="search" placeholder="cleric">
+            <button type="submit"> search </button>
+        </form>
         <div class="all-ideas">
 
             @foreach ($characters as $character)
