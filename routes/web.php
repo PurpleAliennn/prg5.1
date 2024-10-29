@@ -3,6 +3,7 @@
 use App\Http\Controllers\IdeaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,6 +16,9 @@ Route::resource('tags', TagController::class);
 Route::get('/admin', function () {
     return view('admin.home');
 })-> name('admin');
+
+Route::get('/admin', [AdminController::class, 'index'])-> name('admin');
+Route::post('/admin/{idea}/toggle', [AdminController::class, 'toggle'])-> name('admin.toggle');
 
 
 Route::get('/dashboard', function () {

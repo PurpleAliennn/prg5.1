@@ -1,6 +1,7 @@
 <x-nav></x-nav>
 
 <x-layout>
+    @admin
     <div class="create-box">
         <form action="{{ route('tags.store') }}" method="post" class="create-form">
             @csrf
@@ -13,6 +14,7 @@
             <x-primary-button type="submit" class="create-button"> create </x-primary-button>
         </form>
     </div>
+    @endadmin
 </x-layout>
 
 <x-footer></x-footer>

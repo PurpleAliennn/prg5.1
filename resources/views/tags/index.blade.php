@@ -1,6 +1,7 @@
 <x-nav></x-nav>
 
 <x-layout>
+    @admin
     <div class="main">
         <form action="{{route('admin')}}" method="POST">
             @method('GET')
@@ -17,6 +18,7 @@
 
         </div>
     </div>
+    @endadmin
 </x-layout>
 
 <x-footer></x-footer>
