@@ -33,7 +33,7 @@ footer {
 }
 
 .main {
-    min-height: 67.4vh;
+    min-height: 74.4vh;
 }
 
 .idea {
@@ -64,7 +64,7 @@ footer {
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
-    margin-top: 10vh;
+    /*margin-top: 1vh;*/
     margin-bottom: 10vh;
 }
 
@@ -271,7 +271,7 @@ footer {
 
 .tag-details {
     background-color: #8FBC8B;
-    width: 5vw;
+    width: 7vw;
     border-radius: 5px;
     text-align: center;
 }
@@ -288,4 +288,113 @@ footer {
     height: 5vh;
     align-items: center;
     color: #fffdf5;
+}
+
+.search-bar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    height: 5vh;
+    margin-top: 3vh;
+}
+
+#search {
+    background-color: #8FBC8B;
+    border: none;
+    border-radius: 5px;
+    width: 22.5vw;
+    height: 5vh;
+    color: #fffdf5;
+    padding: 5px;
+}
+
+.search-button {
+    color: #fffdf5;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 5vw;
+    background-color: #547052;
+}
+
+.search-button:hover {
+    background-color: #b2cfb0;
+    color: #547052;
+}
+
+.admin-tags {
+    background-color: #b2cfb0;
+    width: 80vw;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.toggle{
+    background-color: #b2cfb0;
+    width: 80vw;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.admin-main{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 77.4vh;
+}
+
+#tag-create-button{
+    background-color: #fffdf5;
+    border: none;
+    border-radius: 10px;
+    height: 5vh;
+    width: 10vw;
+    color: #547052;
+}
+
+#tag-create-button:hover {
+    background-color: #547052;
+    color: #fffdf5;
+}
+
+.toggle-button {
+    background-color: #fffdf5;
+    color: #547052;
+    border: none;
+    border-radius: 5px;
+    margin-left: 1vw;
+    margin-top: 1vh;
+    width: 7vw;
+    padding: 2px;
+}
+
+.toggle-button:hover {
+    background-color: #547052;
+    color: #fffdf5;
+}
+
+.buttons-showpage-admin {
+    margin-left: 3vw;
+}
+
+.buttons-showpage-admin h3 {
+    color: #fffdf5;
+}
+
+.filter-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.filter-options select {
+    background-color: #8FBC8B;
+    border: none;
+    border-radius: 5px;
+    height: 5vh;
+    width: 10vw;
+    padding: 5px;
 }

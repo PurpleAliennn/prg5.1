@@ -15,10 +15,11 @@
                 </div>
 
                 <div class="checkboxes">
-                    @foreach($tags as $tag)
-                        <input type="checkbox" name="tag_id" value="{{ $tag -> id }}">
-                        <x-input-label name="checkbox"> {{ $tag -> name }}</x-input-label>
-                    @endforeach
+                    <select name="tag_id" id="tags">
+                        @foreach($tags as $tag)
+                                <option value="{{ $tag-> id }}"> {{ $tag -> name }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
             </div>

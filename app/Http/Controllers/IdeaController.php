@@ -11,12 +11,17 @@ class IdeaController extends Controller
     public function index(Request $request) {
 
         $characters = Idea::all();
+        $tags = Tag::all();
 
         if($request -> input('search') != null && $request -> input('search') != "") {
             $characters = Idea::where('name', 'like', '%'.$request -> input('search').'%')->orWhere('idea', 'like', '%'.$request -> input('search').'%')->get();
         }
 
-        return view('ideaView', ['characters' => $characters]);
+        if($request -> input('filter') != null && $request -> input('filter') != "") {
+            $characters = Idea::where('tag_id', 'like', $request -> input('filter'))->get();
+        }
+
+        return view('ideaView', ['characters' => $characters], ['tags' => $tags]);
 
     }
 

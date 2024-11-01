@@ -19,4 +19,9 @@ Got the logout button to work on the homepage.
 
 made a table for the tags, and added an admin role.
 
-**_28/10_** : Managed to get the tags working!! Admin can also create new tags
+**_28/10_** : Managed to get the tags working!! Admin can also create new tags.
+
+**_29/10_** : I have created the toggle function for the admin, and I have
+added a search bar on the home page.
+
+**_1/11_** : I have built the filter function for the ideas

@@ -25,7 +25,21 @@
                 </form>
             </div>
         @endif
-
+        @admin
+            <div class="buttons-showpage-admin">
+                <h3> admin controls</h3>
+                <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" id="delete-button"> delete </button>
+                </form>
+                <form action="{{route('ideas.edit', $idea -> id)}}" method="POST">
+                    @method('GET')
+                    @csrf
+                    <button type="submit" id="edit-button"> edit </button>
+                </form>
+            </div>
+        @endadmin
         </div>
     </div>
 </x-layout>

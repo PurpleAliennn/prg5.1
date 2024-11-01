@@ -15,11 +15,13 @@
                     <x-text-input name="idea" id="idea" value="{{ old('idea') ?? $idea->idea }}"></x-text-input>
                 </div>
 
+
                 <div class="checkboxes">
-                    @foreach($tags as $tag)
-                        <input type="checkbox" name="tag_id" value="{{ old('tag') ?? $tag -> id }}">
-                        <x-input-label name="checkbox"> {{ $tag -> name }}</x-input-label>
-                    @endforeach
+                    <select name="tag_id" id="tags">
+                        @foreach($tags as $tag)
+                            <option value="{{ old('tag') ?? $tag-> id }}"> {{ $tag -> name }}</option>
+                        @endforeach
+                    </select>
                 </div>
 
             </div>
