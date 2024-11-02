@@ -24,4 +24,8 @@ made a table for the tags, and added an admin role.
 **_29/10_** : I have created the toggle function for the admin, and I have
 added a search bar on the home page.
 
-**_1/11_** : I have built the filter function for the ideas
+**_1/11_** : I have built the filter function for the ideas. Made sure the edit can't 
+be reached if you did not write the character
+
+**_2/11_** : Form validation for creating ideas, editing ideas and creating new tags has
+been added

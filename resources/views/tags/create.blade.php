@@ -9,6 +9,9 @@
                 <div class="input-field">
                     <x-input-label for="name" id="label"> Tag name </x-input-label>
                     <x-text-input name="name" id="name"> </x-text-input>
+                    @error('name')
+                        <span> {{ $message }} </span>
+                    @enderror
                 </div>
             </div>
             <x-primary-button type="submit" class="create-button"> create </x-primary-button>

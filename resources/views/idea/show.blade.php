@@ -13,6 +13,7 @@
             </div>
         @if(isset(auth()-> user()-> id) && $idea -> user_id === auth()-> user()-> id)
             <div class="buttons-showpage">
+                <h3> edit/delete </h3>
                 <form action="{{route('ideas.destroy', $idea -> id)}}" method="POST">
                     @method('DELETE')
                     @csrf

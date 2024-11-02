@@ -27,8 +27,15 @@ class TagController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request, Tag $tag)
-    {
+    public function store(Request $request, Tag $tag){
+
+        $request->validate([
+            'name' => 'required'
+        ],[
+            'name.required' => 'you must name your tag'
+            ]
+        );
+
         $category = new Tag();
 
         $category -> name = $request->input('name');

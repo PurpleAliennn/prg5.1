@@ -34,6 +34,14 @@ class IdeaController extends Controller
 
     public function store(Request $request, Idea $idea) {
 
+        $request->validate([
+            'name' => 'required',
+            'idea' => 'required',
+        ],[
+            'name.required' => 'A character needs a name',
+            'idea.required' => 'You must describe your character',
+        ]);
+
         $character = new Idea();
 
         $character -> name = $request->input('name');
@@ -59,6 +67,14 @@ class IdeaController extends Controller
     }
 
     public function update(Request $request, Idea $idea) {
+
+        $request->validate([
+            'name' => 'required',
+            'idea' => 'required',
+        ],[
+            'name.required' => 'A character needs a name',
+            'idea.required' => 'You must describe your character',
+        ]);
 
         $idea -> name = $request->input('name');
         $idea -> idea = $request->input('idea');

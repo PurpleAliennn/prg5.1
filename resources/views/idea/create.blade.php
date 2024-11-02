@@ -7,11 +7,17 @@
             <div class="input-fields">
                 <div class="input-field">
                     <x-input-label for="name" id="label"> Character name </x-input-label>
-                    <x-text-input name="name" id="name"> </x-text-input>
+                    <x-text-input name="name" id="name" value=" {{ old('name') }} "> </x-text-input>
+                    @error('name')
+                        <span> {{ $message }} </span>
+                    @enderror
                 </div>
                 <div class="input-field">
                     <x-input-label for="idea" id="label"> type your idea </x-input-label>
-                    <x-text-input name="idea" id="idea"></x-text-input>
+                    <x-text-input name="idea" id="idea" value=" {{ old('idea') }} "></x-text-input>
+                    @error('idea')
+                        <span> {{ $message }} </span>
+                    @enderror
                 </div>
 
                 <div class="checkboxes">

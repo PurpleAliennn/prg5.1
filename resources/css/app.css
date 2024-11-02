@@ -398,3 +398,12 @@ footer {
     width: 10vw;
     padding: 5px;
 }
+
+.edit {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.buttons-showpage h3 {
+    color: #fffdf5;
+}
