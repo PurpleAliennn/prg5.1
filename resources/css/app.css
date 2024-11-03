@@ -407,3 +407,14 @@ footer {
 .buttons-showpage h3 {
     color: #fffdf5;
 }
+
+.error-main{
+    min-height: 77.4vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.error-main h2{
+    color: #547052;
+}

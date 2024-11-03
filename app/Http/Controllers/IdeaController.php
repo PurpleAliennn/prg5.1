@@ -4,10 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Models\Idea;
 use App\Models\Tag;
+use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 
-class IdeaController extends Controller
-{
+class IdeaController extends Controller {
+
+    public static function middleware(): array {
+        return [
+            new Middleware('auth', except: ['index', 'show'])
+        ];
+    }
     public function index(Request $request) {
 
         $characters = Idea::all();
@@ -26,10 +32,10 @@ class IdeaController extends Controller
     }
 
     public function create() {
-
         $tags = Tag::all();
 
         return view('idea.create', ['tags' => $tags]);
+
     }
 
     public function store(Request $request, Idea $idea) {
@@ -63,7 +69,13 @@ class IdeaController extends Controller
 
         $tags = Tag::all();
 
-        return view('idea.edit', ['idea' => $idea], ['tags' => $tags]);
+        $count = Idea::where('user_id', \Auth::id() )->count();
+        if($count > 4) {
+            return view('idea.edit', ['idea' => $idea], ['tags' => $tags]);
+        } else {
+            return view('count.error');
+        }
+
     }
 
     public function update(Request $request, Idea $idea) {

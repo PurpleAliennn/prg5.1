@@ -3,10 +3,16 @@
 namespace App\Http\Controllers;
 
 use App\Models\Tag;
+use GuzzleHttp\Middleware;
 use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
+    public static function middleware(): array {
+        return [
+            new Middleware('auth')
+        ];
+    }
     /**
      * Display a listing of the resource.
      */

@@ -29,3 +29,6 @@ be reached if you did not write the character
 
 **_2/11_** : Form validation for creating ideas, editing ideas and creating new tags has
 been added
+
+**_3/11_** : Deeper validation -> made it so you cannot edit your posts unless you've written at
+least 5 of them. Also added middleware to avoid deep-linking as my previous method was a bit cursed.
